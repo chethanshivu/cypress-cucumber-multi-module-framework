@@ -1,0 +1,28 @@
+{
+  "name": "cypress-multi-module",
+  "version": "1.0.0",
+  "workspaces": [
+    "cypress-multi-module/*",
+    "core-module",
+    "component-a",
+    "component-b"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test:component-a": "lerna run test --scope component-a",
+    "test:component-b": "lerna run test --scope component-b",
+    "test:all": "lerna run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "cypress": "^13.16.0",
+    "lerna": "^8.1.9"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3"
+  }
+}
