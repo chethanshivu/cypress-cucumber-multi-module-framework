@@ -19,10 +19,16 @@
   "description": "",
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "cypress": "^13.16.0",
     "lerna": "^8.1.9"
   },
-  "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^21.0.3"
-  }
+  "cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": true
+},
+  "stepDefinitions": [
+    "cypress/e2e/[filepath]/**/*.{js,ts}",
+    "cypress/e2e/[filepath].{js,ts}",
+    "cypress/support/step_definitions/**/*.{js,ts}"
+  ]
 }
